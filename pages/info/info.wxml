@@ -1,0 +1,59 @@
+<!--pages/info/info.wxml-->
+<view class="section">
+  <span class="label">姓名</span>
+  <input class="input-box" placeholder="请输入姓名" value="{{name}}" placeholder-class="input-pl" bindblur='nameInput' />
+</view>
+<view class="section">
+  <span class="label">性别</span>
+  <radio-group class="radio-group" bindchange="radioChange">
+      <radio class="radio radio-lb" value="0" checked="true">
+          <text>女</text>
+      </radio>
+      <radio class="radio" value="1" checked="true">
+          <text>男</text>
+      </radio>
+  </radio-group>
+</view>
+<!-- <view class="section">
+    <span class="label">年龄</span>
+    <input class="input-box" type="number" name="points" value="{{age}}" maxlength="2" min="18" max="35" placeholder="请输入年龄" placeholder-class="input-pl" bindblur='ageInput' />
+</view>
+ <view class="section {{isImage?'section-temp':''}}" bindtap="chooseImage">
+    <span class="label">头像</span>
+    <view class="education">
+      <image class="{{isImage?'temp-img':'temp-none'}}" src="{{tempFilePaths?tempFilePaths:'../../images/default.png'}}" mode="aspecFill"></image> 
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+</view> -->
+
+<view class="section" bindtap="confirm">
+  <span class="label">最高学历</span>
+  <view class="education">
+    <text>{{eduList[hignEdu]}}</text>  
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view class="section">
+  <span class="label">联系电话</span>
+  <input class="input-box" type="number" value="{{telephone}}" placeholder="请输入手机号" placeholder-class="input-pl" maxlength="11" bindblur='userTellInput' />
+</view>
+<view class="section">
+  <span class="label">联系邮箱</span>
+  <input class="input-box" type="email" value="{{email}}" placeholder="请输入常用邮箱" placeholder-class="input-pl" bindblur='userEmailInput' />
+</view>
+<view class="section section-picker">
+        <span class="label">生日</span>
+        <picker mode="date" value="{{birthday}}"  start="01-01" end="12-30" bindchange="bindDateChange">
+          <view class="picker">
+            <text wx:if="{{birthday!==null}}">{{birthday}}</text>
+            <image class="port" src="../../images/yjt_tjyy.png" />
+          </view>
+        </picker>
+      </view>
+<button class="btn" type="default" size="default" bindtap="save">完成</button>
+
+<modal hidden="{{hidden}}" confirm-text="" cancel-text="" bindcancel="cancel" bindconfirm="confirm" no-cancel="{{nocancel}}">
+    <view class="list" >
+      <view class="item" wx:key="index" wx:for="{{eduList}}" data-index="{{index}}" data-text="{{item}}"  bindtap="getEdu">{{item}}</view>
+    </view>
+</modal>

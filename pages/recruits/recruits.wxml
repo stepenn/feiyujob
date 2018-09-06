@@ -1,0 +1,64 @@
+ <view class="{{!selectPerson?'page':null}}">
+  <view class="fy-wrap">
+      <image class="fy-logo" src="../../images/logo.png" mode="scaleToFill"></image>
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索公司名/学校" bindtap="wxSearchTab" data-type="recruits" value='{{searchKeys}}' />
+          </view>
+        </view>
+      </view>
+  </view>
+
+  <view class="box_pp">
+    <view class="phone_one" bindtap="clickPerson">
+        <view class="phone_personal {{!selectArea?'':'select-text'}}">工作区域</view>
+        <image src="{{selectArea ?'../../images/down-sel.png':'../../images/down.png'}}" class="personal_image"></image>
+        <view class="line"></view>
+    </view>
+    <view class="phone_one" bindtap="myfocused">
+      <text wx:if="{{controlFocus}}" class="phone_personal">我的关注</text>
+      <text wx:if="{{!controlFocus}}" class="phone_personal focus-out">退出关注</text>
+    </view>
+  </view>
+
+
+
+  <view class="fy-content">
+    <ul class="fy-list">
+      <li wx:if="{{curIndex!==index}}" class="fy-item" wx:for="{{listA}}"  data-index="{{index}}" wx:key="{{index}}">
+        <text class="item-address recruits-city {{item.workType==2?'bgA':item.workType==1?'bgB':'bgC'}}">{{item.recruitCitys}}</text>
+        <view class="item-middle" data-id="{{item.id}}" data-type="{{item.workType}}" bindtap="details">
+          <text class="item-title">{{item.title}}</text>
+          <text class="item-time">{{item.publishTime}}</text>
+          <text class="item-city" wx:if="{{item.recruitCitys}}">{{item.recruitCitys}}</text>
+          <view class="item-bottom">
+            <ul class="item-bq" wx:if="{{item.companyTags}}">
+              <li>{{item.companyTags}}</li>
+            </ul>
+          </view>
+        </view>
+      </li>
+    </ul>
+  </view>
+  <view class="noData" wx:if="{{listA.length==0||hasMore}}">没有更多了</view>
+
+</view>
+
+<!--添加遮罩-->
+<view wx-if="{{isMask}}" class="mask"></view>
+<view class="person_box">
+  <view class="phone_select phone_top" hidden="{{selectPerson}}">
+    <ul>
+      <li class="select_one {{curIndex==index?'select_active':''}}" wx:for="{{selectData}}" wx:key="{{index}}" bindtap="mySelect" data-city="{{item.city}}" data-index="{{index}}">{{item.city}}</li>
+      <li wx:if="{{moreCity}}" class="select_one select_more_city" bindtap="mySelect" data-city="{{moreCity}}">{{moreCity}}</li>
+      <text class="more-city" bindtap='moreCity'>更多城市</text>
+    </ul>
+  </view>
+</view>
+<!--回到顶部-->
+<view>
+  <image src="../../images/button-up.png" class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+</view>
+

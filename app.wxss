@@ -1,0 +1,27 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.btn,.delete{
+  margin: 40rpx 20rpx 20rpx;
+  color:#fff!important;
+  font-size:32rpx;
+  height: 75rpx;
+  line-height: 75rpx;
+}
+.btn{
+  background: #1196db!important;
+}
+.delete{
+  background: #E24A49!important;
+}
+button[disabled=disabled]{
+  background: #1196aa!important;
+}
+

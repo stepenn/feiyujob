@@ -1,0 +1,32 @@
+<!--pages/focused/focused.wxml-->
+<view class="header">
+
+  <image class="head" src="{{headImg}}"></image>
+  <span class="name">{{userName}}</span>
+</view>
+
+<!--关注内容-->
+<view>
+  <ul class="fy-list">
+    <li class="fy-item" wx:for="{{focusData}}"  data-index="{{index}}" wx:key="{{index}}">
+      <text wx:if="{{item.recruitCitys&&item.workType==1}}" class="item-address recruits-city {{item.workType==2?'bgA':item.workType==1?'bgB':'bgC'}}">{{item.recruitCitys}}</text>
+      <text wx:if="{{item.school&&item.workType==2}}" class="item-address recruits-city {{item.workType==2?'bgA':item.workType==1?'bgB':'bgC'}}">{{item.school}}</text>
+      <view class="item-middle" data-id="{{item.id}}"  data-type="{{item.workType}}" bindtap="details">
+        <text class="item-title">{{item.title}}</text>
+        <text class="item-time">{{item.publishTime}}</text>
+        <text class="item-city" wx:if="{{item.recruitCitys}}">{{item.recruitCitys}}</text>
+        <view class="item-bottom">
+          <ul class="item-bq" wx:if="{{item.companyTags}}">
+            <li>{{item.companyTags}}</li>
+          </ul>
+          <ul class="item-bq">
+            <li wx:if="{{item.school}}">{{item.school}}</li>
+          </ul>
+        </view>
+      </view>
+      <!-- <image class="close-img" data-selectIndex="{{index}}" data-id="{{item.id}}" src="{{selectIndex[index].sureid? hasSelect : noSelect}}" catchtap='selectRep'></image> -->
+    </li>
+    <text wx:if="{{focusData.length==0}}" class="noData">没有更过数据了</text>
+  </ul>
+</view>
+

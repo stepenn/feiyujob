@@ -1,0 +1,102 @@
+/* pages/login/login.wxss */
+@import "../resume/resume.wxss";
+@import "../info/info.wxss";
+page{
+  height: 100%;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+} 
+ 
+/*登录图片*/
+.login-icon{
+  flex: none;
+  width: 100%;
+  height:330rpx;
+  background-image: radial-gradient(#1196db,#1196db,#2290f0);
+  margin-bottom: 10rpx;
+}
+.login-logo{
+  margin:50rpx auto 0;
+  width:200rpx;
+  height:200rpx;
+  border-radius: 50%;
+}
+.login-img{
+  display: block;
+  width: 200rpx;
+  height:200rpx;
+}
+/*表单内容*/
+.login-from {
+  margin-top: 40rpx;
+  width:90%;
+  height:100%;
+}
+.inputView {
+  background-color: #fff;
+  line-height: 88rpx;
+}
+/*输入框*/
+.nameImage, .keyImage {
+  display: block;
+  margin-left: 22rpx;
+  margin-top:22rpx;
+  width: 48rpx;
+  height: 48rpx;
+  float:left;
+}
+ 
+.loginLab {
+  margin: 15rpx 15rpx 15rpx 10rpx;
+  color: #545454;
+  font-size: 32rpx
+}
+.inputText {
+  flex: block;
+  float: right;
+  text-align: right;
+  margin-right: 22rpx;
+  margin-top: 22rpx;
+  color: #000;
+  font-size: 32rpx;
+}
+.line {
+  width: 100%;
+  height: 2rpx;
+  background-color: #ddd;
+  margin-top: 2rpx;
+}
+/*按钮*/
+.input-title{
+  border-bottom:2rpx solid #ddd;
+  margin-bottom:25rpx;
+  display: flex;
+  justify-content: space-around;
+  font-size: 32rpx;
+}
+.active{
+  border-bottom:5rpx solid #1196db;
+  padding-bottom: 22rpx;
+  position: relative;
+  top:2rpx;
+  color:#1196db;
+}
+.section{
+  background: #fff;
+}
+.radio-lb{
+  margin-right:10rpx;
+}
+.input-email{
+  width:400rpx;
+}
+.list .item{
+  color:#666;
+  border-bottom:2rpx solid #ddd;
+}

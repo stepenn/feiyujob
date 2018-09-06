@@ -1,0 +1,38 @@
+<!--pages/education/education.wxml-->
+<view class="section">
+  <span class="label">学校</span>
+  <input class="input-box" placeholder="请输入学校全名" value="{{schoolName}}" placeholder-class="input-pl" bindinput='schoolNameInput' />
+</view>
+<view class="section section-picker">
+  <span class="label">学历</span>
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">
+      <text>{{array[level]}}</text>
+      <image class="port" src="../../images/yjt_tjyy.png" />
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <span class="label">专业</span>
+  <input class="input-box" placeholder="请填写所学专业" value="{{professional}}" placeholder-class="input-pl" bindinput='proInput' />
+</view>
+<view class="section">
+  <span class="label">时间段</span>
+  <picker mode="date" value="{{dateStart}}" start="2014-09-01" end="至今" bindchange="bindDateStartChange">
+    <view class="picker">
+      <text wx:if="{{!dateStart.length}}" class="choice">请选择</text>
+      <text class="time-start">{{dateStart}}</text>
+      <text>到</text>
+    </view>
+  </picker>
+  <picker mode="date" value="{{dateEnd}}" start="2015-09-01" end="至今" bindchange="bindDateEndChange">
+    <view class="picker">
+      <text wx:if="{{!dateEnd.length}}" class="choice">请选择</text>
+      <text>{{dateEnd}}</text>
+      <image class="port" src="../../images/yjt_tjyy.png" />
+    </view>
+  </picker>
+</view>
+<button class="btn" type="default" size="default" bindtap="saveEdu">完成</button>
+<button wx:if="{{itemId!=='undefined'}}" class="delete" type="default" size="default" bindtap="deleteItem">删除</button>
+      

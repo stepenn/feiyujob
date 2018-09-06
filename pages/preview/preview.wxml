@@ -1,0 +1,142 @@
+<!--pages/preview/preview.wxml-->
+<view class="section">
+  <view class="info">
+    <view class="user">
+      <text class="name">{{name}}</text>
+      <ul class="edu-info">
+        <li wx:if="{{hignEdu}}">
+          <image class="edu-img" src="../../images/diplomas.png"></image>
+          <text class="edu">{{highData[hignEdu]}}</text>
+        </li>
+        <li wx:if="{{age}}">
+          <image class="edu-img" src="../../images/age.png"></image>
+          <text class="edu">{{age}}</text>
+        </li>
+        <li>
+          <image class="edu-img" src="../../images/tel.png"></image>
+          <text class="edu">{{telephone}}</text>
+        </li>
+      </ul>
+    </view>
+  </view>
+  <image class="head" src="{{headImg}}"></image>
+</view>
+<!--求职意向-->
+<view class="section borderC" wx:if="{{intentJob&&intentCity}}">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">求职意向</text>
+  </view>
+</view>
+<view class="section-text" wx:if="{{intentJob&&intentCity}}">
+    <text>{{intentJob}}</text>
+    <span class="line"></span>
+    <text>{{intentCity}}</text>
+</view>
+<!--教育经历-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">教育经历</text>
+  </view>
+</view>
+<view wx:for="{{eduInfos}}" wx:key="{{index}}">
+  <view class="section-edu">
+    <text class="project">{{item.schooName}}</text>
+    <text class="edu-time">{{eduTime[index]}}</text>
+    <text>{{item.professional}}</text>
+  </view>
+</view>
+<!--实习经历-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">实习经历</text>
+  </view>
+</view>
+<view wx:for="{{practiceData}}" wx:key="{{index}}">
+  <view class="section-edu" >
+    <text class="project">{{item.company}}</text>
+    <text class="edu-time">{{practiceTime[index]}}</text>
+    <text>{{item.jobName}}</text>
+  </view>
+  <view class="section-con">
+      <p class="content">{{item.content}}</p>
+  </view>
+</view>
+<!--项目经历-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">项目经验</text>
+  </view>
+</view>
+<view wx:for="{{projectData}}" wx:key="{{index}}">
+  <view class="section-edu">
+    <text class="project">{{item.company}}</text>
+    <text>{{item.jobName}}</text>
+  </view>
+  <view class="section-con">
+      <p class="content">{{item.content}}</p>
+  </view>
+</view>
+<!--荣誉奖项-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">荣誉奖项</text>
+  </view>
+</view>
+<view wx:for="{{awardInfos}}" wx:key="{{index}}">
+  <view class="section-edu">
+    <text>{{item.name}}</text>
+    <text class="edu-time">{{levelData[item.level]}}</text>
+    <text>{{awardTime[index]}}</text>
+  </view>
+</view>
+<!--社团经历-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">社团经历</text>
+  </view>
+</view>
+<view wx:for="{{schoolWorks}}" wx:key="{{index}}">
+  <view class="section-edu">
+    <text>{{item.name}}</text>
+    <text class="edu-time">{{item.job}}</text>
+    <text>{{schoolTime[index]}}</text>
+  </view>
+</view>
+<!--技能特长-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">技能特长</text>
+  </view>
+</view>
+<view class="section-edu" wx:if="{{skillData}}">
+  <text wx:for="{{skillData}}" wx:key="{{index}}">{{item.name}}</text>
+</view>
+<!--获得证书-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">获得证书</text>
+  </view>
+</view>
+<view  class="section-edu" wx:if="{{credentialData}}">
+    <text wx:for="{{credentialData}}" wx:key="{{index}}">{{item.name}}</text>
+</view>
+<!--附加信息-->
+<view class="section borderC">
+  <view>
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title">附加信息</text>
+  </view>
+</view>
+<view>
+  <view class="section-con" wx:for="{{attachInfos}}" wx:key="{{index}}">
+      <p class="content">{{item.content}}</p>
+  </view>
+</view>

@@ -1,0 +1,75 @@
+/* pages/preach/preach.wxss */
+@import "../recruits/recruits.wxss";
+@import "../education/education.wxss";
+.phone_two{
+  width:33.3%;
+}
+.phone_two:last-child{
+  border-right: 0;
+}
+.personal_ima{
+  right:7%;
+  margin:25rpx 0rpx 0rpx 0;
+}
+.personal_imt{
+  right:0;
+  margin:25rpx 0rpx 40rpx 0;
+}
+.personal_imy{
+  right:7%;
+  margin:25rpx 0rpx 30rpx 0;
+}
+.time{
+  padding-left:90rpx;
+}
+.location-city{
+  border-bottom:2rpx solid #ccc;
+  padding-bottom:20rpx;
+  margin-bottom:20rpx;
+}
+.select-city,.select-school{
+  height:520rpx;
+  overflow-x: hidden;
+  overflow-y: scroll
+}
+.select-city{
+  position: absolute;
+  top:124rpx;
+}
+.close-img{
+  display: block;
+  width:28rpx;
+  height:28rpx;
+  padding-top:20rpx;
+  position: absolute;
+  z-index:9;
+  right:30rpx;
+  bottom:30rpx;
+}
+.location-tips{
+  color:#1196db!important;
+}
+.select-school{
+  position: absolute;
+  top:124rpx;
+}
+.location-city text{
+  font-size:28rpx;
+  color:#666;
+}
+.location-region{
+  margin-left:10rpx;
+}
+.location-img{
+  display: inline-block;
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+  margin-right:10rpx;
+}
+.arrow-down{
+  padding-top:10rpx;
+  width:42rpx;
+  height:42rpx;
+  float:right;
+}

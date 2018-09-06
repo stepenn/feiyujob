@@ -1,0 +1,193 @@
+<!--pages/resume/resume.wxml-->
+<view class="header" bindtap="onInfo">
+  <view class="info">
+    <image class="head" src="{{headImg}}"></image>
+    <view class="user">
+      <text class="name">{{userName}}</text>
+      <text class="edit">修改个人信息</text>
+    </view>
+  </view>
+  <image class="port port-f" src="../../images/yjt_tjyy.png" />
+</view>
+
+<!--求职意向start-->
+<view class="section section-picker" bindtap="intention">
+  <span class="label">求职意向</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<!--求职意向end-->
+
+<!--教育经历start-->
+<view wx:if="{{eduData.length==0}}" class="section" bindtap='eduThrough'>
+  <span class="label">教育经历</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{eduData.length>0}}">
+  <view class="section" wx:for="{{eduData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}" bindtap='eduThrough'>
+    <span class="label">{{item.schooName}}</span>
+    <view class="education">
+      <text>{{eduTime[index]}}</text>  
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+  </view>
+  <view class="add-item" bindtap='eduThrough'>
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">教育经历</span>
+  </view>
+</view>
+<!--教育经历end-->
+
+<!--实习经历start-->
+<view class="section" wx:if="{{practiceData.length==0}}" bindtap='practiceTh'>
+  <span class="label">实习经历</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{practiceData.length>0}}">
+  <view class="section" wx:for="{{practiceData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}" bindtap="practiceTh">
+    <span class="label">{{item.company}}</span>
+    <view class="education" >
+      <text>{{practiceTime[index]}}</text>  
+      <image class="portrait" src="../../images/yjt_tjyy.png"  />
+    </view>
+  </view>
+  <view class="add-item" bindtap="practiceTh">
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">实习经历</span>
+  </view>
+</view>
+<!--实习经历end-->
+
+<!--项目经历start-->
+<view class="section" wx:if="{{projectData.length==0}}" bindtap='projectTh'>
+  <span class="label">项目经历</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{projectData.length>0}}">
+  <view class="section" wx:for="{{projectData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}" bindtap="projectTh">
+    <span class="label">{{item.company}}</span>
+    <view class="education" >
+      <text>{{projectTime[index]}}</text>  
+      <image class="portrait" src="../../images/yjt_tjyy.png"  />
+    </view>
+  </view>
+  <view class="add-item" bindtap="projectTh">
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">项目经验</span>
+  </view>
+</view>
+<!--项目经历end-->
+
+<!--荣誉奖项start-->
+<view class="section" wx:if="{{honorData.length==0}}" bindtap='honorTh' >
+  <span class="label">荣誉奖项</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{honorData.length>0}}">
+  <view class="section"  wx:for="{{honorData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}"  bindtap='honorTh'>
+    <span class="label">{{item.name}}</span>
+    <view class="education">
+      <text>{{honorTime[index]}}</text>  
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+  </view>
+  <view class="add-item" bindtap='honorTh'>
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">荣誉奖项</span>
+  </view>
+</view>
+<!--荣誉奖项end-->
+
+<!--社团经历start-->
+<view class="section" bindtap='massTh' wx:if="{{massData.length==0}}">
+  <span class="label">社团经历</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{massData.length>0}}">
+  <view class="section" wx:for="{{massData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}" bindtap="massTh">
+    <span class="label">{{item.name}}</span>
+    <view class="education" >
+      <text>{{massTime[index]}}</text>  
+      <image class="portrait" src="../../images/yjt_tjyy.png"  />
+    </view>
+  </view>
+  <view class="add-item" bindtap="massTh">
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">社团经历</span>
+  </view>
+</view>
+<!--社团经历end-->
+
+<!--技能特长start-->
+<view class="section" wx:if="{{skillData.length==0}}" bindtap='skillTh'>
+  <span class="label">技能特长</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{skillData.length>0}}">
+  <view class="section" wx:for="{{skillData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}"  bindtap='skillTh'>
+    <span class="label">{{item.name}}</span>
+    <view class="education">
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+  </view>
+  <view class="add-item" bindtap='skillTh'>
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">技能特长</span>
+  </view>
+</view>
+<!--技能特长end-->
+
+<!--获得证书start-->
+<view class="section" wx:if="{{credentialData.length==0}}"  bindtap='credential'>
+  <span class="label">获得证书</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<view wx:if="{{credentialData.length>0}}">
+  <view class="section" wx:for="{{credentialData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}"  bindtap='credential'>
+    <span class="label">{{item.name}}</span>
+    <view class="education">
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+  </view>
+  <view class="add-item" bindtap='skillTh'>
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">获得证书</span>
+  </view>
+</view>
+<!--获得证书end-->
+
+
+<view class="section" wx:if="{{attachData.length==0}}">
+  <span class="label">附加信息</span>
+  <view class="more" >
+    <image class="portrait" src="../../images/yjt_tjyy.png" data-id="{{item.id}}" data-item="{{item}}" bindtap="proDescribe" />
+  </view>
+</view>
+<view wx:if="{{attachData.length>0}}">
+  <view class="section" wx:for="{{attachData}}" wx:key="index" data-id="{{item.id}}" data-item="{{item}}"  bindtap='proDescribe'>
+    <span class="label">{{item.content}}</span>
+    <view class="education">
+      <image class="portrait" src="../../images/yjt_tjyy.png" />
+    </view>
+  </view>
+  <view class="add-item" bindtap='proDescribe'>
+    <image class="add-img" src="../../images/add.png" />
+    <span class="add-edu">附加信息</span>
+  </view>
+</view>
+<button class="btn" type="default" size="default" bindtap="glance">预览简历</button>

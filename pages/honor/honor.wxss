@@ -1,0 +1,2 @@
+/* pages/honor/honor.wxss */
+@import "../resume/resume.wxss";

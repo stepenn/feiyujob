@@ -1,0 +1,15 @@
+<!--pages/intention/intention.wxml-->
+<view class="section section-picker">
+  <span class="label">意向城市</span>
+  <picker bindchange="bindPickerChangeCity" value="{{indexCity}}" range="{{arrayCity}}">
+    <view class="picker">
+      <text>{{cityName}}</text>
+      <image class="port" src="../../images/yjt_tjyy.png" />
+    </view>
+  </picker>
+</view>
+<view class="section section-picker">
+  <span class="label">意向岗位</span>
+  <input class="input-box" placeholder="请输入意向岗位" value="{{intentPosition}}" placeholder-class="input-pl" bindinput='intentPositionInput' />
+</view>
+<button class="btn" type="default" size="default" bindtap="saveEdu">完成</button>

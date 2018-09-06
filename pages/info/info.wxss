@@ -1,0 +1,39 @@
+/* pages/info/info.wxss */
+@import "../resume/resume.wxss";
+.radio-lb{
+  margin-right: 20rpx;
+}
+.education{
+  display: flex;
+  justify-content: flex-end;
+}
+.item{
+  display: block;
+  border-bottom:2rpx solid #eee; 
+  padding:20rpx 0;
+}
+.item:last-child{
+  border: none;
+}
+.temp-img{
+  display: block;
+  width:120rpx;
+  height:120rpx;
+  border-radius:100%; 
+  float: left;
+}
+.section-temp{
+  line-height: 120rpx;
+}
+.temp-none{
+  display: block;
+  width:50rpx;
+  height:50rpx;
+  float: left;
+}
+.section-temp .portrait{
+  display: block;
+  margin-top:30rpx;
+}
+
+

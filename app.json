@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/recruits/recruits",
+    "pages/preach/preach",
+    "pages/personal/personal",
+    "pages/login/login",
+    "pages/search/search",
+    "pages/resume/resume",
+    "pages/info/info", 
+    "pages/education/education",
+    "pages/practice/practice",
+    "pages/project/project",
+    "pages/competitive/competitive",
+    "pages/focused/focused",
+    "pages/preview/preview",
+    "pages/intention/intention",
+    "pages/content/content",
+    "pages/honor/honor",
+    "pages/mass/mass",
+    "pages/skill/skill",
+    "pages/credential/credential",
+    "pages/attachs/attachs",
+    "pages/details/details",
+    "pages/article/article",
+    "pages/authorize/authorize",
+    "pages/city/city",
+    "pages/stage/stage"
+  ],
+  "tabBar": {
+    "color": "#ababab",
+    "selectedColor": "#1196db",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "猜你喜欢",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-sel.png"
+      },
+      {
+        "pagePath": "pages/recruits/recruits",
+        "text": "校园招聘",
+        "iconPath": "images/recruits.png",
+        "selectedIconPath": "images/recruits-sel.png"
+      },
+      {
+        "pagePath": "pages/preach/preach",
+        "text": "宣讲会",
+        "iconPath": "images/preach.png",
+        "selectedIconPath": "images/preach-sel.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人中心",
+        "iconPath": "images/personal.png",
+        "selectedIconPath": "images/personal-sel.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1196db",
+    "navigationBarTextStyle": "#fff"
+  }
+}

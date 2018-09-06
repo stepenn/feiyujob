@@ -1,0 +1,3 @@
+/* pages/mass/mass.wxss */
+@import "../resume/resume.wxss";
+@import "../practice/practice.wxss";

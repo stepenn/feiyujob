@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "竞争力指数",
+  "usingComponents": {
+    "ec-canvas": "../../ec-canvas/ec-canvas"
+  }
+}

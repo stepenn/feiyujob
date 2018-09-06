@@ -1,0 +1,137 @@
+/* pages/stage/stage.wxss */
+@import "../../wxParse/wxParse.wxss";
+.box{
+  height:80rpx;
+  background: #1196db;
+  padding-left:30rpx;
+  padding-right:20rpx;
+  display: flex;
+}
+.name{
+  padding-top:10rpx;
+  padding-left:10rpx;
+  font-size:32rpx;
+  font-weight:bold;
+  color:#fff;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+}
+.content{
+  padding:0 20rpx 0 30rpx;
+  color:#8C9398;
+  font-size:28rpx;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:4; 
+  margin-bottom:24rpx;
+}
+.tabs{
+  padding-left:30rpx;
+}
+.tabs .item{
+  font-size:28rpx;
+  background:#BED7F4;
+  color:#333;
+  margin-right:16rpx;
+  padding:4rpx 10rpx;
+}
+.company_name{
+  display: inline-block;
+  width:64rpx;
+  height:64rpx;
+  vertical-align: middle;
+}
+.title{
+  font-size:32rpx;
+  color:#1196db;
+}
+.dot{
+  width:24rpx;
+  height:24rpx;
+}
+.info{
+  margin-top:30rpx;
+  padding-left:30rpx;
+}
+.section{
+  margin-bottom: 20rpx;
+}
+.info-title,.info-level{
+  font-size:32rpx;
+  color:#333;
+}
+.info-bottom{
+  position:fixed;
+  left: 0;
+  bottom:0;
+  display: flex;
+  width:100%;
+  border-top:2rpx solid #ddd; 
+}
+.info-content{
+  font-size:32rpx;
+  color:#333;
+}
+.icon-collect,.icon-share{
+  display: block;
+  width:36rpx;
+  height: 36rpx;
+}
+.icon-share{
+  margin: 12rpx auto 0;
+}
+.icon-collect{
+  margin: 12rpx auto 8rpx;
+}
+.collect-text{
+  font-size:28rpx;
+}
+.collect,.share{
+  width:25%;
+  background: #f8f8f8;
+  border:2rpx solid #eee;
+  text-align: center;
+}
+.share-resume{
+  display: block;
+  width:50%;
+  background:#D6E7F9;
+  color:#fff;
+  font-size:32rpx;
+  text-align:center;
+  line-height: 120rpx;
+}
+.section-desc{
+  margin-top:30rpx;
+  padding-bottom:124rpx;
+}
+.hasMore{
+  display: block;
+  margin:100rpx auto 40rpx;
+  width:200rpx;
+  height:200rpx;
+}
+.dataText{
+  display: block;
+  font-size: 34rpx;
+  color:#999;
+  text-align:center;
+}
+.select-text{
+  font-size:28rpx;
+  color:#ff4021;
+}
+.button-hover{
+  background: none !important;
+  color:#fff;
+}
+button::after{ 
+  border: none; 
+}
+button[type="default"],wx-button[disabled]:not([type]){
+  background: none !important;
+}

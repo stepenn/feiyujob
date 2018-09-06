@@ -1,0 +1,11 @@
+/* pages/practice/practice.wxss */
+@import "../education/education.wxss";
+.time-start{
+  margin-right: 40rpx;
+  color:#000;
+}
+.choice{
+  color:#ccc;
+  margin-right: 40rpx;
+  font-size:28rpx;
+}

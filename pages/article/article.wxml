@@ -1,0 +1,7 @@
+<!--pages/article/article.wxml-->
+<view>
+    <textarea value="{{beContent}}" placeholder="请填写附加信息..." bindinput="getDes">
+    </textarea>
+</view>
+<button class="btn" type="default" size="default" bindtap="save">完成</button>
+<button wx:if="{{itemId!=='undefined'}}" class="delete" type="default" size="default" bindtap="deleteItem">删除</button>

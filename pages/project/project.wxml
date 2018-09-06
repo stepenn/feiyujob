@@ -1,0 +1,34 @@
+<!--pages/project/project.wxml-->
+<view class="section">
+  <span class="label">项目名称</span>
+  <input class="input-box" placeholder="请输入项目名称" value="{{projectName}}" placeholder-class="input-pl" bindblur='projectNameInput' />
+</view>
+<view class="section">
+  <span class="label">项目岗位</span>
+  <input class="input-box" placeholder="请输入您担任的岗位" value="{{projectRole}}" placeholder-class="input-pl" bindblur='projectRoleInput' />
+</view>
+<view class="section">
+  <span class="label">时间段</span>
+  <picker mode="date" value="{{dateStart}}" start="2014-09-01" end="至今" bindchange="bindDateStartChange">
+    <view class="picker">
+      <text wx:if="{{!dateStart.length}}" class="choice">请选择</text>
+      <text class="time-start">{{dateStart}}</text>
+      <text>到</text>
+    </view>
+  </picker>
+  <picker mode="date" value="{{dateEnd}}" start="2015-09-01" end="至今" bindchange="bindDateEndChange">
+    <view class="picker">
+      <text wx:if="{{!dateEnd.length}}" class="choice">请选择</text>
+      <text>{{dateEnd}}</text>
+      <image class="port" src="../../images/yjt_tjyy.png" />
+    </view>
+  </picker>
+</view>
+<view class="section">
+  <span class="label">项目内容</span>
+  <view class="more">
+    <image class="portrait" src="../../images/yjt_tjyy.png" bindtap="proDescribe" />
+  </view>
+</view>
+<button class="btn" type="default" size="default" bindtap="saveEdu">完成</button>
+<button wx:if="{{itemId!=='undefined'}}" class="delete" type="default" size="default" bindtap="deleteItem">删除</button>

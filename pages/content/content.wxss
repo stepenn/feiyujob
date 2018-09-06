@@ -1,0 +1,16 @@
+/* pages/content/content.wxss */
+page{
+  background:#f9f9f9;
+}
+textarea{
+  border: none;
+  outline: medium;
+  font-size: 32rpx;
+  color: #1c1c1c;
+  width: 100%;
+  resize: none;
+  padding:30rpx 20rpx 0rpx;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px #eee;
+}

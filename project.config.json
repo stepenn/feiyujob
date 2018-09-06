@@ -1,0 +1,188 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.91",
+	"appid": "wx2c118d5d31cfe4c5",
+	"projectname": "job-assistant-master",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 24,
+			"list": [
+				{
+					"id": -1,
+					"name": "recruits",
+					"pathName": "pages/recruits/recruits",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "resume",
+					"pathName": "pages/resume/resume",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "Info",
+					"pathName": "pages/info/info",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "practice",
+					"pathName": "pages/practice/practice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "project",
+					"pathName": "pages/project/project",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "des",
+					"pathName": "pages/description/description",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "competitive",
+					"pathName": "pages/competitive/competitive",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preach",
+					"pathName": "pages/preach/preach",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "honor",
+					"pathName": "pages/honor/honor",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "skill",
+					"pathName": "pages/skill/skill",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "credential",
+					"pathName": "pages/credential/credential",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "focused",
+					"pathName": "pages/focused/focused",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "additional",
+					"pathName": "pages/additional/additional",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preview",
+					"pathName": "pages/preview/preview",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "authorize",
+					"pathName": "pages/authorize/authorize",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "activate",
+					"pathName": "pages/activate/activate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "city",
+					"pathName": "pages/city/city",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "intention",
+					"pathName": "pages/intention/intention",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "edu",
+					"pathName": "pages/education/education",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "preview",
+					"pathName": "pages/preview/preview",
+					"query": ""
+				},
+				{
+					"id": 23,
+					"name": "stage",
+					"pathName": "pages/stage/stage",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "search",
+					"pathName": "pages/search/search",
+					"query": ""
+				}
+			]
+		}
+	}
+}

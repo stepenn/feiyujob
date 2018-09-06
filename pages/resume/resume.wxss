@@ -1,0 +1,93 @@
+/* pages/resume/resume.wxss */
+.header{
+  width:100%;
+  height:140rpx;
+  display: flex;
+  justify-content: space-between;
+  border:2rpx solid #e7eaf1;
+  padding:20rpx;
+  box-sizing: border-box;
+}
+.info{
+  display: flex;
+  justify-content: space-around;
+}
+.head{
+  width:100rpx;
+  height:100rpx;
+  border-radius:50%;
+  border:2rpx solid #eee;
+  margin-right: 40rpx;
+}
+.user{
+  margin-top:12rpx;
+}
+.name{
+  font-size:32rpx;
+  display: block;
+}
+.edit{
+  font-size:28rpx;
+  color:#ccc;
+}
+.education{
+  display: flex;
+  justify-content: flex-end;
+}
+.add-item{
+  text-align:center;
+  border-top:2rxp solid#e7eaf1;
+  padding:24rpx 0;
+  border-bottom:20rpx solid #e7eaf1;
+}
+.add-img{
+  display:inline-block;
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+}
+.add-edu{
+  color:#1196db;
+  font-size:32rpx;
+}
+.port{
+  width:50rpx;
+  height:50rpx;
+}
+.port-f{
+  margin-top: 20rpx;
+}
+.picker{
+  display: flex;
+  justify-content: flex-end;
+}
+.section{
+  border-bottom: 2rpx solid #e7eaf1;
+  display: flex;
+  justify-content: space-between;
+  font-size:32rpx;
+  padding:30rpx 20rpx 30rpx 30rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.section .label,.section text{
+  margin-top:5rpx;
+}
+.more{
+  display: flex;
+  justify-content: space-around;
+}
+.input-box{
+  text-align: right;
+  font-size:32rpx;
+}
+.input-pl{
+  color:#ccc;
+  font-size:28rpx;
+  text-align: right;
+}
+.portrait{
+  width:50rpx;
+  height:50rpx;
+}

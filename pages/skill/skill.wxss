@@ -1,0 +1,3 @@
+/* pages/skill/skill.wxss */
+@import "../honor/honor.wxss";
+

@@ -1,0 +1,6 @@
+<!--pages/content/content.wxml-->
+<view>
+    <textarea value="{{beContent}}" placeholder="请您简单描述一下..." bindinput="getDes">
+    </textarea>
+</view>
+<button class="btn" type="default" size="default" bindtap="save">完成</button>

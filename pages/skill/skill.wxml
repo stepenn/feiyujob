@@ -1,0 +1,18 @@
+<!--pages/skill/skill.wxml-->
+<view class="section">
+  <span class="label">技能</span>
+  <input class="input-box" placeholder="请输入所获奖项" value="{{awards}}" placeholder-class="input-pl" bindblur='awardsInput' />
+</view>
+<view class="section section-picker">
+  <span class="label">时间</span>
+  <picker mode="date" value="{{date}}" start="2015-09-01" end="2021-07-01" bindchange="bindDateChange">
+    <view class="picker">
+      <text>{{date}}</text>
+      <image class="port" src="../../images/yjt_tjyy.png" />
+    </view>
+  </picker>
+</view>
+<button class="btn" type="default" size="default" bindtap="save">完成</button>
+<button wx:if="{{itemId!=='undefined'}}" class="delete" type="default" size="default" bindtap="deleteItem">删除</button>
+
+

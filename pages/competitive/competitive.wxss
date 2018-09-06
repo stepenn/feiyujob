@@ -1,0 +1,44 @@
+/* pages/competitive/competitive.wxss */
+.echarts-box {
+  position: absolute;
+  width:100%;
+  height:620rpx;
+} 
+ec-canvas {
+  width:100%;
+  height: 620rpx;
+}
+.score{
+  display: inline-block;
+  width:48rpx;
+  height:48rpx;
+  vertical-align: middle;
+
+}
+.title{
+  font-size:32rpx;
+  color:#1196db;
+}
+.content{
+  position:absolute;
+  top:620rpx;
+  z-index:99;
+  left:30rpx;
+}
+.conclusion{
+  position: absolute;
+  top:700rpx;
+  left:30rpx;
+  font-size:32rpx;
+  color:#777;
+}
+.dot{
+  width:24rpx;
+  height:24rpx;
+}
+.skill{
+  color:#1196db!important;
+}
+.suggest{
+  margin-bottom:20rpx;
+}

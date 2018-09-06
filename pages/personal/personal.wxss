@@ -1,0 +1,60 @@
+/* pages/personal/personal.wxss */
+page{
+  background: #f9f9f9;
+}
+.header{
+  display: flex;
+  justify-content: flex-start;
+  margin:15rpx 0;
+  background:#fff;
+  width:100%;
+  height: 150;
+  text-align: center;
+  padding:20rpx 30rpx;
+  box-shadow: 2px 2px 5px #ddd;
+}
+.head{
+  display: block;
+  width:128rpx;
+  height:128rpx;
+  border-radius: 100%;
+  margin-right: 30rpx;
+  border:1px solid #eee;
+}
+.name{
+  display: block;
+  margin-top: 44rpx;
+  font-size: 32rpx;
+}
+
+.item-li{
+  width:100%;
+  height:100rpx;
+  line-height:100rpx;
+  background: #fff;
+  padding:0 20rpx 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+}
+.set-icon{
+  width:32rpx;
+  height:32rpx;
+  vertical-align: middle;
+}
+.set-convention{
+  display: flex;
+  justify-content: space-between;
+  height:100%;
+  border-bottom: 2rpx solid #eee;
+}
+.setConvention{
+    font-size:32rpx;
+    margin-left:20rpx;
+}
+
+
+.portrait{
+  width:50rpx;
+  height:50rpx;
+  padding-top:24rpx;
+}

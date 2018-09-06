@@ -1,0 +1,34 @@
+<!--pages/home/home.wxml-->
+<view class="fy-wrap">
+  <image class="fy-logo" src="../../images/logo.png" mode="scaleToFill"></image>
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box" >
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" disabled='true' bindtap="wxSearchTab" data-type="home" value="{{searchKeys}}" placeholder="搜索公司名/学校"  />
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--推荐内容-->
+<view class="fy-content">
+  <ul class="fy-list">
+    <li wx:if="{{curIndex!==index}}" class="fy-item" wx:for="{{list}}"  data-index="{{index}}" wx:key="{{index}}">
+      <text class="item-address {{item.workType==2?'bgA':item.workType==1?'bgB':'bgC'}}">{{item.title}}</text>
+      <view class="item-middle" data-id="{{item.id}}" data-type="{{item.workType}}" bindtap="details">
+        <text class="item-title">{{item.title}}</text>
+        <text class="item-time">{{item.publishTime}}</text>
+        <text class="item-city">{{city}}</text>
+        <view class="item-bottom">
+          <ul class="item-bq">
+            <li>{{item.teachInsAddress}}</li>
+          </ul>
+        </view>
+      </view>
+      <image class="close-img" data-index="{{index}}" src="../../images/close.png" catchtap='closeInfo'></image>
+    </li>
+  </ul>
+</view>
+<view class="noData" wx:if="{{list.length==0}}">没有更多了</view>
+

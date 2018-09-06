@@ -1,0 +1,214 @@
+/* pages/home/home.wxss */
+.page{
+  height: 100vh;
+  overflow: hidden;
+}
+.fy-wrap{
+  width:100%;
+  height:290rpx;
+  background: #1196db;
+  position: relative;
+  z-index:3;
+}
+.fy-logo{
+  display: block;
+  margin:0 auto;
+  width:184rpx;
+  height:154rpx;
+}
+.fy-item{
+  display: flex;
+  justify-content: space-start;
+  font-size: 28rpx;
+  padding:30rpx 20rpx 0;
+  position: relative;
+}
+.item-address{
+  display: inline-block;
+  width:90rpx;
+  height:90rpx;
+  line-height: 90rpx;
+  text-align:center;
+  border:2rpx solid #ccc;
+  font-size:32rpx;
+  font-weight: bold;
+  color:#fff;
+  padding:0 10rpx;
+  box-sizing:border-box;
+  overflow: hidden;
+}
+.bgA{
+  background:#c1bee6;
+}
+.bgB{
+  background: #F4B1A8;
+}
+.bgC{
+  background: #A0C0EC;
+}
+.noData{
+  display:block;
+  font-size:28rpx;
+  text-align: center;
+  margin-top:30rpx;
+  color:#777;
+}
+.item-middle{
+ border-bottom:2rpx solid #eaeaea;
+ padding-bottom:30rpx;
+ width:90%;
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ overflow:hidden; 
+}
+.item-bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.item-title{
+  padding-left:20rpx;
+  display: block;
+  overflow:hidden; 
+  text-overflow:ellipsis;
+  white-space:nowrap; 
+  font-weight: bold;
+  color:#4D5255;
+  font-size:32rpx;
+}
+.item-bq{
+  padding-top:20rpx;
+}
+.item-bq li{
+  margin:0 10rpx;
+  background: #F5F7F6;
+  padding:10rpx;
+  color:#6B7380;
+}
+.item-time{
+  display: inline-block;
+  padding-left:20rpx;
+  padding-top:10rpx;
+  color:#6B7380;
+  
+}
+.hidden{
+  display: none;
+}
+.item-city{
+  margin-left:20rpx;
+  color:#6B7380;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  border-left:2rpx solid #6B7380;
+  padding-left:20rpx;
+}
+.item-img{
+  display: block;
+  width:48rpx;
+  height:36rpx;
+  padding-top:20rpx;
+  position: absolute;
+  right:20rpx;
+  top:40rpx;
+}
+.close-img{
+  display: block;
+  width:32rpx;
+  height:32rpx;
+  padding-top:20rpx;
+  position: absolute;
+  right:20rpx;
+  bottom:30rpx;
+}
+
+
+/** ---------------------- 以下是搜索框的 we-ui 样式--------------------------------*/
+
+/*!
+ * WeUI v1.1.1 (https://github.com/weui/weui-wxss)
+ * Copyright 2017 Tencent, Inc.
+ * Licensed under the MIT license
+ */
+.weui-search-bar {
+  position: relative;
+  padding: 20px 20rpx 0 20rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #1196db;
+}
+
+.weui-icon-search {
+  margin-right: 8px;
+  font-size: inherit;
+}
+
+.weui-icon-search_in-box {
+  position: absolute;
+  left: 28%;
+  top: 14rpx;
+}
+
+.weui-search-bar__text {
+  display: inline-block;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 20px;
+  background: #fff;
+  text-align:center;
+  border: 1rpx solid #e6e6ea;
+  
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 60rpx;
+  padding-right: 60rpx;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-search-bar__input {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 28rpx;
+  color:#676767;
+}
+.weui-icon-clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 7px 8px;
+  font-size: 0;
+}
+
+.weui-search-bar__label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 3px;
+  text-align: center;
+  color: #eee;
+  background: #fff;
+  line-height: 28px;
+}
+
+.weui-search-bar__cancel-btn {
+  margin-left: 10px;
+  line-height: 28px;
+  color: #09bb07;
+  white-space: nowrap;
+}

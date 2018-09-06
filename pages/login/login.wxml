@@ -1,0 +1,69 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="login-icon">
+    <view class="login-logo">
+      <image class="login-img" src="../../images/logo1.png"></image>
+    </view>
+  </view>
+  <view class="login-from">
+    <view class="input-title">
+      <span class="{{currentMethod==='partLogin'?'active':''}}" bindtap="partLogin">快速登录</span>
+      <span class="{{currentMethod==='partRegister'?'active':''}}" bindtap="partRegister">快速注册</span>
+    </view>
+    <!--登录-->
+    <view wx:if="{{currentMethod==='partLogin'}}">
+      <!--账号-->
+      <view class="inputView">
+        <image class="nameImage" src="../../images/user.png"></image>
+        <label class="loginLab">用户名</label>
+        <input class="inputText" placeholder="请输入用户名" placeholder-class="input-pl" bindblur="userNameInput" />
+      </view>
+      <view class="line"></view>
+      <!--密码-->
+      <view class="inputView">
+        <image class="keyImage" src="../../images/password.png"></image>
+        <label class="loginLab">密码</label>
+        <input class="inputText" placeholder-class="input-pl" password="true" placeholder="请输入密码" bindblur="passwordInput" />
+      </view>
+ 
+    <!--按钮-->
+      <view class="loginBtnView">
+        <button class="btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"  bindtap="login">登录</button>
+      </view>
+    </view>
+    <!--快速注册-->
+    <view wx:if="{{currentMethod==='partRegister'}}">
+      <view class="section">
+          <span class="label">用户名</span>
+          <input class="input-box" value="{{userName}}" placeholder="请输入用户名" placeholder-class="input-pl" bindblur='userNameInput' />
+      </view>
+      <view class="section">
+          <span class="label">密码</span>
+          <input class="input-box" password="true" placeholder="请输入密码" placeholder-class="input-pl" maxlength="12" bindblur='passwordInput' />
+      </view>
+      <view class="section">
+        <span class="label">性别</span>
+        <radio-group class="radio-group" bindchange="radioChange">
+            <radio class="radio radio-lb" value="2" checked="true">
+                <text>女</text>
+            </radio>
+            <radio class="radio" value="1">
+                <text>男</text>
+            </radio>
+        </radio-group>
+      </view>
+      <view class="section">
+        <span class="label">邮箱</span>
+        <input class="input-box input-email" type="email" placeholder="请输入邮箱" placeholder-class="input-pl" bindblur='emailInput' />
+      </view>
+      <view class="section">
+        <span class="label">手机</span>
+        <input class="input-box" type="number" placeholder="请输入手机号" maxlength="11" placeholder-class="input-pl" bindblur='telInput' />
+      </view>
+      <view class="loginBtnView">
+        <button class="btn" type="primary" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"  bindtap="register">注册</button>
+      </view>
+    </view>
+  </view>
+</view>
+

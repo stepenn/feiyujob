@@ -1,0 +1,17 @@
+/* pages/education/education.wxss */
+@import "../resume/resume.wxss";
+.time-start{
+  margin-right: 40rpx;
+  color:#000;
+}
+.choice{
+  color:#ccc;
+  margin-right: 40rpx;
+  font-size:28rpx;
+}
+.btn{
+  background: #1196db!important;
+  margin: 40rpx 20rpx 0;
+  color:#fff!important;
+  
+}

@@ -1,0 +1,38 @@
+/* pages/focused/focused.wxss */
+@import "../home/home.wxss";
+page{
+  width:100%;
+  height:100%;
+  background:#f9f9f9;
+}
+.header{
+  background:#fff;
+  width:100%;
+  height: 200rpx;
+  text-align: center;
+  padding:30rpx 0;
+  border:2rpx solid #eee;
+  box-shadow: 2px 2px 5px #eee;
+}
+.head{
+  display: block;
+  margin:0 auto;
+  width:160rpx;
+  height:160rpx;
+  border-radius: 50%;
+}
+.close-img{
+  display: block;
+  width:28rpx;
+  height:28rpx;
+  padding-top:20rpx;
+  position: absolute;
+  z-index:9;
+  right:30rpx;
+  bottom:30rpx;
+}
+.name{
+  display: block;
+  margin-top: 10rpx;
+  font-size: 32rpx;
+}

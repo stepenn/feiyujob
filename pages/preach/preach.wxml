@@ -1,0 +1,81 @@
+<!--pages/preach/preach.wxml-->
+<view class="{{!selectCity?'page':null}}">
+<view class="fy-wrap">
+    <image class="fy-logo" src="../../images/logo.png" mode="scaleToFill"></image>
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input"  disabled='true' placeholder="搜索公司名/学校" bindtap="wxSearchTab" data-type='preach' value='{{searchKeys}}'/>
+        </view>
+      </view>
+    </view>
+</view>
+<view class="box_pp">
+  <view class="phone_one phone_two" bindtap="clickCity">
+      <view class="phone_personal {{selectCity?'':'select-text'}}">学校</view>
+      <image src="{{!selectCity ?'../../images/down-sel.png':'../../images/down.png'}}" class="personal_image personal_ima"></image>
+      <view class="line"></view>
+  </view>
+  <view class="phone_one phone_two">
+      <picker mode="date" value="{{date}}" start="2016-09-01" end="2021-07-01" bindchange="bindDateChange">
+        <view class="picker">
+          <view class="phone_personal time {{selectTime?'':'select-text'}}">时间</view>
+      <image src="{{!selectTime?'../../images/down-sel.png':'../../images/down.png'}}" class="personal_image personal_imy"></image>
+        </view>
+      </picker>
+      <view class="line"></view>
+  </view>
+  <view class="phone_one phone_two" bindtap="myfocused">
+    <text wx:if="{{controlFocus}}" class="phone_personal">我的关注</text>
+    <text wx:if="{{!controlFocus}}" class="phone_personal focus-out">退出关注</text>
+  </view>
+</view>
+<view class="fy-content">
+  <ul class="fy-list">
+    <li wx:if="{{curIndex!==index}}" class="fy-item" wx:for="{{listB}}"  data-index="{{index}}" wx:key="{{index}}">
+      <text class="item-address recruits-city {{item.workType==2?'bgA':item.workType==1?'bgB':'bgC'}}">{{item.school}}</text>
+      <view class="item-middle" data-id="{{item.id}}" data-type="{{item.workType}}" bindtap="details">
+        <text class="item-title">{{item.companyName}}</text>
+        <text class="item-time">{{item.xjTime}}</text>
+        <text class="item-city" wx:if="{{item.recruitCitys}}">{{item.recruitCitys}}</text>
+        <view class="item-bottom">
+          <ul class="item-bq">
+            <li wx:if="{{item.school}}">{{item.school}}</li>
+          </ul>
+        </view>
+      </view>
+      <image class="close-img" data-selectIndex="{{index}}" data-id="{{item.id}}" src="{{selectIndex[index].sureid? hasSelect : noSelect}}" catchtap='selectRep'></image>
+    </li>
+  </ul>
+</view>
+</view>
+<view class="noData" wx:if="{{listB.length==0||hasMore}}">没有更多了</view>
+
+<!--添加遮罩-->
+<view wx-if="{{isMask}}" class="mask"></view>
+<!--下拉框selectCity内容-->
+<view class="person_box person_city">
+  <view class="phone_select" hidden="{{selectCity}}">
+    <view class="location-city" bindtap="toggleCity">
+      <image src="../../images/location.png" class="location-img"></image>
+      <text>当前地区:</text>
+      <text wx:if="{{locationAuthType==1&&isAuth}}" class="location-tips" catchtap='onTapLocation'>打开位置权限</text>
+      <text class='location-region location-tips'>{{locationCity}}</text>
+      <image src="../../images/arrow-down.png" class="location-img arrow-down"></image>
+    </view>
+    <ul class="select-city" wx-if="{{toggleCity}}">
+      <li class="select_one {{curIndex==index?'select_active':''}}" wx:for="{{selectCityData}}" wx:key="{{index}}" bindtap="selectCityHandler" data-val="{{item.city}}" data-index="{{index}}">{{item.city}}</li>
+      <li wx:if="{{moreCity}}" class="select_one select_more_city" bindtap="selectCityHandler" data-val="{{moreCity}}">{{moreCity}}</li>
+      <text class="more-city" bindtap='moreCity'>更多城市</text>
+    </ul>
+    <ul class="select-school" wx-if="{{toggleSchool}}">
+      <li class="select_two {{curIndexS==index?'select_active':''}}" bindtap="selectSchool" wx:for="{{selectSchoolData}}" wx:key="{{index}}" data-val="{{item.name}}" data-index="{{index}}">{{item.name}}</li>
+    </ul>
+  </view>
+</view>
+<!--回到顶部-->
+<view>
+  <image src="../../images/button-up.png" class='goTop' hidden='{{!floorstatus}}' bindtap="goTop"></image>
+</view>
+

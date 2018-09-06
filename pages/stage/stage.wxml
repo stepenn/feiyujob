@@ -1,0 +1,71 @@
+<!--pages/stage/stage.wxml-->
+<view class="box" wx:if="{{detailsData}}">
+    <image class="company_name" src="../../images/companyName.png"></image>
+    <text class="name">{{companyName}}</text>
+</view>
+<view wx:if="{{detailsData}}">
+   <text class="content" wx:if="{{companyDesc}}">
+     {{companyDesc}}
+    </text>
+    <ul class="tabs" wx:if="{{companyTags}}">
+      <li class="item">{{companyTags}}</li>
+    </ul>
+</view>
+<view class="info">
+  <view class="section" wx:if="{{detailsData}}">
+    <image class="dot" src="../../images/dot.png" />
+    <text class="title" wx:if="{{types==1}}">招聘信息</text>
+    <text class="title" wx:if="{{types==2}}">宣讲信息</text>
+  </view>
+  <view class="section" wx:if="{{recruitCitys}}">
+    <text class="info-title" wx:if="{{types==1}}">招聘城市：</text>
+    <text class="info-title" wx:if="{{types==2}}">宣讲城市：</text>
+    <text class="info-level">{{recruitCitys}}</text>
+  </view>
+  <view class="section" wx:if="{{school}}">
+    <text class="info-title" wx:if="{{types==2}}">宣讲学校：</text>
+    <text class="info-level">{{school}}</text>
+  </view>
+  <view class="section" wx:if="{{teachInsAddress}}">
+    <text class="info-title" wx:if="{{types==2}}">宣讲地点：</text>
+    <text class="info-level">{{teachInsAddress}}</text>
+  </view>
+  <view class="section" wx:if="{{xjTime}}">
+    <text class="info-title" wx:if="{{types==2}}">宣讲时间：</text>
+    <text class="info-level">{{xjTime}}</text>
+  </view>
+  <view class="section" wx:if="{{recruitUrl}}">
+    <text class="info-title">招聘官网：</text>
+    <text class="info-level">{{recruitUrl}}</text>
+  </view>
+  <view class="section" wx:if="{{recruitWork||preachJob}}">
+    <text class="info-title" wx:if="{{types==1}}">职位介绍：</text>
+    <text class="info-title" wx:if="{{types==2}}">宣讲职位说明：</text>
+    <view class="section-desc">
+      <p class="info-content" wx:if="{{types==1&&recruitWork}}">
+        <import src="../../wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </p>
+      <p class="info-content" wx:if="{{types==2&&recruitWork}}">
+        <import src="../../wxParse/wxParse.wxml" />
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </p>
+    </view>
+  </view>
+</view>
+<view class="info-bottom" wx:if="{{detailsData}}">
+  <view class="collect" bindtap='collectHander'>
+    <image class="icon-collect" src="{{select?'../../images/like-sel.png':'../../images/like.png'}}"></image>
+    <text class="{{select?'select-text':'collect-text'}}">收藏</text>
+  </view>
+  <view class="share">
+    <image class="icon-share" src="../../images/share.png"></image>
+    <button class="collect-text" open-type='share'>分享</button>
+  </view>
+  <text class="share-resume">投递简历</text>
+</view>
+
+<view class="noData" wx:if="{{!detailsData}}">
+  <image class="hasMore" src="../../images/404.png"></image>
+  <text class="dataText">暂无详情数据</text>
+</view>

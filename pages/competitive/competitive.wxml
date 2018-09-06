@@ -1,0 +1,22 @@
+<!--pages/competitive/competitive.wxml-->
+<view class="echarts-box">
+  <ec-canvas id="mychart-dom-graph" canvas-id="mychart-graph" ec="{{ ec }}"></ec-canvas>
+</view>
+<view class="content">
+  <image class='score' src="../../images/score.png"></image>
+  <text class="title">经过AI评估,得出结论:</text>
+</view>
+<view class="conclusion">
+   <view class="suggest">
+    <image class="dot" src="../../images/dot.png" />
+    <p>您的<span class="skill">学习能力</span>为优秀</p>
+  </view>
+  <view class="suggest">
+    <image class="dot" src="../../images/dot.png" />
+    <p><span class="skill">社交能力</span>和<span class="skill">技能水平</span>偏弱，需要提高</p>
+  </view>
+  <view class="suggest">
+    <image class="dot" src="../../images/dot.png" />
+    <text>飞鱼建议：可以针对性地学习一门技术，将对你更有帮助！</text>
+  </view>
+</view>

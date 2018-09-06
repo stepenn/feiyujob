@@ -1,0 +1,38 @@
+<!--pages/personal/personal.wxml-->
+<view wx:if="{{userName}}" class="header">
+  <image class="head" src="{{headImg?headImg:'../../images/default.png'}}"></image>
+  <span class="name">{{userName}}</span>
+</view>
+<view wx:if="{{!userName}}" class="header" bindtap="loginCenter">
+  <image class="head" src="../../images/default.png"></image>
+  <view class="login">
+    <span class="name">登录 / 注册</span>
+  </view>
+</view>
+<view class="item-li">
+  <view class="set-convention" bindtap="myResume">
+    <view class="setBox">
+      <image src="../../images/resume.png" class="set-icon" />
+      <span class="setConvention">我的简历</span>
+    </view>
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
+<!-- <view class="item-li">
+  <view class="set-convention" bindtap="myIndex">
+    <view class="setBox">
+      <image src="../../images/number.png" class="set-icon" />
+      <span class="setConvention">竞争力指数</span>
+    </view>
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view> -->
+<view class="item-li">
+  <view class="set-convention" bindtap="myFocused">
+    <view class="setBox">
+      <image src="../../images/attention.png" class="set-icon" />
+      <span class="setConvention">我的关注</span>
+    </view>
+    <image class="portrait" src="../../images/yjt_tjyy.png" />
+  </view>
+</view>
